@@ -1,0 +1,203 @@
+Release 10.1 Map K.31 (nt)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -ise D:/workspace/single_cpu/single_CPU.ise -intstyle ise
+-p xc3s500e-fg320-4 -cm area -pr off -k 4 -c 100 -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.46 $
+Mapped Date    : Wed Mar 09 15:23:04 2011
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:         1,264 out of   9,312   13%
+  Number of 4 input LUTs:             2,273 out of   9,312   24%
+Logic Distribution:
+  Number of occupied Slices:          1,682 out of   4,656   36%
+    Number of Slices containing only related logic:   1,682 out of   1,682 100%
+    Number of Slices containing unrelated logic:          0 out of   1,682   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       2,299 out of   9,312   24%
+    Number used as logic:             2,273
+    Number used as a route-thru:         26
+  Number of bonded IOBs:                 15 out of     232    6%
+  Number of RAMB16s:                      2 out of      20   10%
+  Number of BUFGMUXs:                     2 out of      24    8%
+
+Peak Memory Usage:  203 MB
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   11 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal CCLK are pushed forward
+   through input buffer.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   6 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		x_c_dat_mem/GND
+VCC 		x_c_dat_mem/VCC
+GND 		x_c_instr_mem/GND
+VCC 		x_c_instr_mem/VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+| BTN2                               | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0    |
+| BTN3                               | IBUF             | INPUT     | LVTTL       |          |      |              | PULLDOWN | 0 / 0    |
+| CCLK                               | IBUF             | INPUT     | LVCMOS33    |          |      |              |          | 0 / 0    |
+| LCDDAT<0>                          | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| LCDDAT<1>                          | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| LCDDAT<2>                          | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| LCDDAT<3>                          | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| LCDE                               | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| LCDRS                              | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| LCDRW                              | IOB              | OUTPUT    | LVCMOS33    | 4        | SLOW |              |          | 0 / 0    |
+| LED                                | IOB              | OUTPUT    | LVTTL       | 8        | SLOW |              |          | 0 / 0    |
+| SW<0>                              | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
+| SW<1>                              | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
+| SW<2>                              | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
+| SW<3>                              | IBUF             | INPUT     | LVTTL       |          |      |              | PULLUP   | 0 / 0    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Nam |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| top/               |           | 132/1754      | 109/1264      | 176/2299      | 0/0           | 0/2       | 0/0       | 1/2   | 0/0   | top                   |
+| +M0                |           | 0/343         | 0/114         | 0/633         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/M0                |
+| ++M0               |           | 235/235       | 69/69         | 437/437       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/M0/M0             |
+| ++M1               |           | 108/108       | 45/45         | 196/196       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/M0/M1             |
+| +M1                |           | 3/3           | 4/4           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/M1                |
+| +M2                |           | 3/3           | 4/4           | 2/2           | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | top/M2                |
+| +x_c_dat_mem       |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | top/x_c_dat_mem       |
+| +x_c_instr_mem     |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0       | 0/0   | 0/0   | top/x_c_instr_mem     |
+| +x_single_add      |           | 5/5           | 0/0           | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_add      |
+| +x_single_alu      |           | 64/64         | 0/0           | 126/126       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_alu      |
+| +x_single_aluc     |           | 6/6           | 0/0           | 8/8           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_aluc     |
+| +x_single_ctl      |           | 6/6           | 0/0           | 7/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_ctl      |
+| +x_single_gpr      |           | 1148/1148     | 1024/1024     | 1296/1296     | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_gpr      |
+| +x_single_mux32    |           | 24/24         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_mux32    |
+| +x_single_mux5     |           | 5/5           | 0/0           | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_mux5     |
+| +x_single_pc       |           | 0/10          | 0/9           | 0/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_pc       |
+| ++x_dff            |           | 9/9           | 9/9           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_pc/x_dff |
+| ++x_sel            |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_pc/x_sel |
+| +x_single_pc_plus4 |           | 5/5           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | top/x_single_pc_plus4 |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

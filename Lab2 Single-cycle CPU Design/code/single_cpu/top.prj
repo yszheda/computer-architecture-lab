@@ -1,0 +1,7 @@
+verilog work "lcd.v"
+verilog work "single_pc.v"
+verilog work "pbdebounce.v"
+verilog work "lcdtest.v"
+verilog work "./c_instr_mem.v"
+verilog work "c_dat_mem.v"
+verilog work "top.v"

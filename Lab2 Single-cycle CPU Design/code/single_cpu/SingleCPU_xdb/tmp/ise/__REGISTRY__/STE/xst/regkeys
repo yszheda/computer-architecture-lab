@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\xst.exe -ise D:/3080101654_single_cpu.ise/SingleCPU.ise -intstyle ise -ifn D:/3080101654_single_cpu.ise/SingleCPU.xst -ofn D:/3080101654_single_cpu.ise/SingleCPU.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

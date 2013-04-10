@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RootFolder label="COREGEN" treetype="folder" language="COREGEN">
+	<Folder label="VERILOG Component Instantiation" treetype="folder">
+		<Template label="instr_block" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+instr_block YourInstanceName (
+    .addr(addr), // Bus [8 : 0] 
+    .clk(clk),
+    .dout(dout)); // Bus [31 : 0] 
+
+ 
+		</Template>
+		<Template label="dat_block" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+dat_block YourInstanceName (
+    .addr(addr), // Bus [8 : 0] 
+    .clk(clk),
+    .din(din), // Bus [31 : 0] 
+    .dout(dout), // Bus [31 : 0] 
+    .we(we));
+
+ 
+		</Template>
+		<Template label="c_dat_mem" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+c_dat_mem YourInstanceName (
+    .addr(addr), // Bus [8 : 0] 
+    .clk(clk),
+    .din(din), // Bus [31 : 0] 
+    .dout(dout), // Bus [31 : 0] 
+    .we(we));
+
+ 
+		</Template>
+		<Template label="c_instr_mem" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+c_instr_mem YourInstanceName (
+    .addr(addr), // Bus [8 : 0] 
+    .clk(clk),
+    .dout(dout)); // Bus [31 : 0] 
+
+ 
+		</Template>
+		<Template label="c_data_mem" treetype="template">
+ 
+ 
+// The following must be inserted into your Verilog file for this
+// core to be instantiated. Change the instance name and port connections
+// (in parentheses) to your own signal names.
+ 
+c_data_mem YourInstanceName (
+    .addr(addr), // Bus [8 : 0] 
+    .clk(clk),
+    .din(din), // Bus [31 : 0] 
+    .dout(dout), // Bus [31 : 0] 
+    .we(we));
+
+ 
+		</Template>
+	</Folder>
+	<Folder label="VHDL Component Instantiation" treetype="folder">
+		<Template label="instr_block" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component instr_block
+    port (
+    addr: IN std_logic_VECTOR(8 downto 0);
+    clk: IN std_logic;
+    dout: OUT std_logic_VECTOR(31 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : instr_block
+        port map (
+            addr =&gt; addr,
+            clk =&gt; clk,
+            dout =&gt; dout);
+ 
+		</Template>
+		<Template label="dat_block" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component dat_block
+    port (
+    addr: IN std_logic_VECTOR(8 downto 0);
+    clk: IN std_logic;
+    din: IN std_logic_VECTOR(31 downto 0);
+    dout: OUT std_logic_VECTOR(31 downto 0);
+    we: IN std_logic);
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : dat_block
+        port map (
+            addr =&gt; addr,
+            clk =&gt; clk,
+            din =&gt; din,
+            dout =&gt; dout,
+            we =&gt; we);
+ 
+		</Template>
+		<Template label="c_dat_mem" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component c_dat_mem
+    port (
+    addr: IN std_logic_VECTOR(8 downto 0);
+    clk: IN std_logic;
+    din: IN std_logic_VECTOR(31 downto 0);
+    dout: OUT std_logic_VECTOR(31 downto 0);
+    we: IN std_logic);
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : c_dat_mem
+        port map (
+            addr =&gt; addr,
+            clk =&gt; clk,
+            din =&gt; din,
+            dout =&gt; dout,
+            we =&gt; we);
+ 
+		</Template>
+		<Template label="c_instr_mem" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component c_instr_mem
+    port (
+    addr: IN std_logic_VECTOR(8 downto 0);
+    clk: IN std_logic;
+    dout: OUT std_logic_VECTOR(31 downto 0));
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : c_instr_mem
+        port map (
+            addr =&gt; addr,
+            clk =&gt; clk,
+            dout =&gt; dout);
+ 
+		</Template>
+		<Template label="c_data_mem" treetype="template">
+ 
+ 
+-- The following code must appear in the VHDL architecture header:
+ 
+component c_data_mem
+    port (
+    addr: IN std_logic_VECTOR(8 downto 0);
+    clk: IN std_logic;
+    din: IN std_logic_VECTOR(31 downto 0);
+    dout: OUT std_logic_VECTOR(31 downto 0);
+    we: IN std_logic);
+end component;
+
+
+ 
+-------------------------------------------------------------
+ 
+-- The following code must appear in the VHDL architecture body.
+-- Substitute your own instance name and net names.
+ 
+your_instance_name : c_data_mem
+        port map (
+            addr =&gt; addr,
+            clk =&gt; clk,
+            din =&gt; din,
+            dout =&gt; dout,
+            we =&gt; we);
+ 
+		</Template>
+	</Folder>
+</RootFolder>

@@ -1,0 +1,12 @@
+# Output products list for <instr_block>
+instr_block.asy
+instr_block.edn
+instr_block.mif
+instr_block.sym
+instr_block.v
+instr_block.veo
+instr_block.vhd
+instr_block.vho
+instr_block.xco
+instr_block_flist.txt
+instr_block_xmdf.tcl

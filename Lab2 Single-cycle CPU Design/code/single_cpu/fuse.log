@@ -1,0 +1,87 @@
+Determining compilation order of HDL files
+Analyzing Verilog file instr_block.v
+Analyzing Verilog file help.v
+Analyzing Verilog file dat_block.v
+Analyzing Verilog file SingleCPU.v
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Saving Verilog parse-tree work.instr_block into
+d:/workspace/single_cpu/isim/work/instr_block.sdb
+Saving Verilog parse-tree work.mux9 into
+d:/workspace/single_cpu/isim/work/mux9.sdb
+Saving Verilog parse-tree work.mux5 into
+d:/workspace/single_cpu/isim/work/mux5.sdb
+Saving Verilog parse-tree work.mux8 into
+d:/workspace/single_cpu/isim/work/mux8.sdb
+Saving Verilog parse-tree work.mux32 into
+d:/workspace/single_cpu/isim/work/mux32.sdb
+Saving Verilog parse-tree work.mux16 into
+d:/workspace/single_cpu/isim/work/mux16.sdb
+Saving Verilog parse-tree work.single_pc into
+d:/workspace/single_cpu/isim/work/single_pc.sdb
+Saving Verilog parse-tree work.single_pc_plus4 into
+d:/workspace/single_cpu/isim/work/single_pc_plus4.sdb
+Saving Verilog parse-tree work.single_signext into
+d:/workspace/single_cpu/isim/work/single_signext.sdb
+Saving Verilog parse-tree work.single_add into
+d:/workspace/single_cpu/isim/work/single_add.sdb
+Saving Verilog parse-tree work.ReadFile into
+d:/workspace/single_cpu/isim/work/@read@file.sdb
+Saving Verilog parse-tree work.SingleCtrl into
+d:/workspace/single_cpu/isim/work/@single@ctrl.sdb
+Saving Verilog parse-tree work.ALU into
+d:/workspace/single_cpu/isim/work/@a@l@u.sdb
+Saving Verilog parse-tree work.ALUctrl into
+d:/workspace/single_cpu/isim/work/@a@l@uctrl.sdb
+Saving Verilog parse-tree work.display into
+d:/workspace/single_cpu/isim/work/display.sdb
+Saving Verilog parse-tree work.delay_ms into
+d:/workspace/single_cpu/isim/work/delay_ms.sdb
+Saving Verilog parse-tree work.anti into
+d:/workspace/single_cpu/isim/work/anti.sdb
+Saving Verilog parse-tree work.dat_block into
+d:/workspace/single_cpu/isim/work/dat_block.sdb
+Saving Verilog parse-tree work.SingleCPU into
+d:/workspace/single_cpu/isim/work/@single@c@p@u.sdb
+Saving Verilog parse-tree work.glbl into
+d:/workspace/single_cpu/isim/work/glbl.sdb
+Starting static elaboration
+Restoring Verilog parse-tree xilinxcorelib_ver.BLKMEMSP_V6_2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/xilinxcorelib_ver/xilinxcorelib_ver.sdbl
+WARNING:HDLCompiler:189 - "SingleCPU.v" Line 61. Actual bit length 1 differs
+   from formal bit length 32 for port o_32
+WARNING:HDLCompiler:189 - "SingleCPU.v" Line 62. Actual bit length 1 differs
+   from formal bit length 32 for port B
+WARNING:HDLCompiler:189 - "SingleCPU.v" Line 68. Actual bit length 1 differs
+   from formal bit length 32 for port i_op1
+WARNING:HDLCompiler:189 - "SingleCPU.v" Line 69. Actual bit length 9 differs
+   from formal bit length 32 for port A
+WARNING:HDLCompiler:189 - "SingleCPU.v" Line 70. Actual bit length 9 differs
+   from formal bit length 8 for port A
+Completed static elaboration
+Fuse Memory Usage: 113820 Kb
+Fuse CPU Usage: 577 ms
+Compiling module glbl
+Compiling module delay_ms
+Compiling module anti
+Compiling module single_pc
+Compiling module single_pc_plus4
+Compiling module BLKMEMSP_V6_2(c_addr_width=9,c_d...
+Compiling module instr_block
+Compiling module SingleCtrl
+Compiling module mux5
+Compiling module ReadFile
+Compiling module single_signext
+Compiling module mux32
+Compiling module ALUctrl
+Compiling module ALU
+Compiling module BLKMEMSP_V6_2(c_addr_width=9,c_d...
+Compiling module dat_block
+Compiling module single_add
+Compiling module mux8
+Compiling module mux16
+Compiling module display
+Compiling module SingleCPU
+Compiled 21 Verilog Units
+Built simulation executable SingleCPU_isim_beh.exe
+Fuse Memory Usage: 116232 Kb
+Fuse CPU Usage: 936 ms

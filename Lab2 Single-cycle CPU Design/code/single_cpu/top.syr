@@ -1,0 +1,965 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/workspace/single_cpu/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> Parameter xsthdpdir set to D:/workspace/single_cpu/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.37 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : top.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "lcd.v" in library work
+Compiling verilog file "single_pc.v" in library work
+Module <lcd> compiled
+Module <single_pc> compiled
+Module <dff> compiled
+Module <sel> compiled
+Module <single_add> compiled
+Module <single_pc_plus4> compiled
+Module <single_signext> compiled
+Module <single_mux32> compiled
+Compiling verilog include file "macro.vh"
+Module <single_mux5> compiled
+Compiling verilog include file "macro.vh"
+Module <single_aluc> compiled
+Module <single_alu> compiled
+Module <single_gpr> compiled
+Compiling verilog file "pbdebounce.v" in library work
+Module <single_ctl> compiled
+Compiling verilog file "lcdtest.v" in library work
+Module <pbdebounce> compiled
+Module <display> compiled
+Compiling verilog file "./c_instr_mem.v" in library work
+Module <genlcd> compiled
+Compiling verilog file "c_dat_mem.v" in library work
+Module <c_instr_mem> compiled
+Compiling verilog file "top.v" in library work
+Module <c_dat_mem> compiled
+Module <top> compiled
+No errors in compilation
+Analysis of file <"top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <top> in library <work>.
+
+Analyzing hierarchy for module <display> in library <work>.
+
+Analyzing hierarchy for module <pbdebounce> in library <work>.
+
+Analyzing hierarchy for module <single_pc> in library <work>.
+
+Analyzing hierarchy for module <single_pc_plus4> in library <work>.
+
+Analyzing hierarchy for module <single_mux5> in library <work>.
+
+Analyzing hierarchy for module <single_gpr> in library <work>.
+
+Analyzing hierarchy for module <single_aluc> in library <work>.
+
+Analyzing hierarchy for module <single_signext> in library <work>.
+
+Analyzing hierarchy for module <single_mux32> in library <work>.
+
+Analyzing hierarchy for module <single_alu> in library <work>.
+
+Analyzing hierarchy for module <single_add> in library <work>.
+
+Analyzing hierarchy for module <single_ctl> in library <work>.
+
+Analyzing hierarchy for module <lcd> in library <work>.
+
+Analyzing hierarchy for module <genlcd> in library <work>.
+
+Analyzing hierarchy for module <dff> in library <work>.
+
+Analyzing hierarchy for module <sel> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <top>.
+Module <top> is correct for synthesis.
+ 
+Analyzing module <display> in library <work>.
+Module <display> is correct for synthesis.
+ 
+Analyzing module <lcd> in library <work>.
+Module <lcd> is correct for synthesis.
+ 
+Analyzing module <genlcd> in library <work>.
+WARNING:Xst:790 - "lcdtest.v" line 106: Index value(s) does not match array range, simulation mismatch.
+Module <genlcd> is correct for synthesis.
+ 
+Analyzing module <pbdebounce> in library <work>.
+Module <pbdebounce> is correct for synthesis.
+ 
+Analyzing module <single_pc> in library <work>.
+Module <single_pc> is correct for synthesis.
+ 
+Analyzing module <dff> in library <work>.
+Module <dff> is correct for synthesis.
+ 
+Analyzing module <sel> in library <work>.
+Module <sel> is correct for synthesis.
+ 
+Analyzing module <single_pc_plus4> in library <work>.
+Module <single_pc_plus4> is correct for synthesis.
+ 
+Analyzing module <single_mux5> in library <work>.
+Module <single_mux5> is correct for synthesis.
+ 
+Analyzing module <single_gpr> in library <work>.
+Module <single_gpr> is correct for synthesis.
+ 
+Analyzing module <single_aluc> in library <work>.
+Module <single_aluc> is correct for synthesis.
+ 
+Analyzing module <single_signext> in library <work>.
+Module <single_signext> is correct for synthesis.
+ 
+Analyzing module <single_mux32> in library <work>.
+Module <single_mux32> is correct for synthesis.
+ 
+Analyzing module <single_alu> in library <work>.
+Module <single_alu> is correct for synthesis.
+ 
+Analyzing module <single_add> in library <work>.
+Module <single_add> is correct for synthesis.
+ 
+Analyzing module <single_ctl> in library <work>.
+Module <single_ctl> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <rwlcd> in unit <lcd> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <homelcd> in unit <genlcd> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <pbdebounce>.
+    Related source file is "pbdebounce.v".
+WARNING:Xst:646 - Signal <pbshift<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <pbreg>.
+    Found 3-bit register for signal <pbshift<2:0>>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <pbdebounce> synthesized.
+
+
+Synthesizing Unit <single_pc_plus4>.
+    Related source file is "single_pc.v".
+    Found 9-bit adder for signal <opc>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <single_pc_plus4> synthesized.
+
+
+Synthesizing Unit <single_mux5>.
+    Related source file is "single_pc.v".
+Unit <single_mux5> synthesized.
+
+
+Synthesizing Unit <single_gpr>.
+    Related source file is "single_pc.v".
+    Found 32-bit 32-to-1 multiplexer for signal <o_op1>.
+    Found 32-bit 32-to-1 multiplexer for signal <o_op2>.
+    Found 32-bit 32-to-1 multiplexer for signal <o_op3>.
+    Found 1024-bit register for signal <mem>.
+INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <mem>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred  96 Multiplexer(s).
+Unit <single_gpr> synthesized.
+
+
+Synthesizing Unit <single_aluc>.
+    Related source file is "single_pc.v".
+    Found 3-bit 4-to-1 multiplexer for signal <aluc>.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <single_aluc> synthesized.
+
+
+Synthesizing Unit <single_signext>.
+    Related source file is "single_pc.v".
+Unit <single_signext> synthesized.
+
+
+Synthesizing Unit <single_mux32>.
+    Related source file is "single_pc.v".
+Unit <single_mux32> synthesized.
+
+
+Synthesizing Unit <single_alu>.
+    Related source file is "single_pc.v".
+    Found 32-bit adder for signal <o_alu$addsub0000> created at line 160.
+    Found 32-bit comparator less for signal <o_alu$cmp_lt0000> created at line 168.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <single_alu> synthesized.
+
+
+Synthesizing Unit <single_add>.
+    Related source file is "single_pc.v".
+    Found 32-bit adder for signal <out>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <single_add> synthesized.
+
+
+Synthesizing Unit <single_ctl>.
+    Related source file is "single_pc.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <single_ctl> synthesized.
+
+
+Synthesizing Unit <lcd>.
+    Related source file is "lcd.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <$old_lcdstate_3> of Case statement line 41 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <$old_lcdstate_3> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <$old_lcdstate_3>.
+    Using one-hot encoding for signal <$old_lcdstate_6>.
+    Using one-hot encoding for signal <$old_lcdstate_10>.
+    Using one-hot encoding for signal <$old_lcdstate_14>.
+    Using one-hot encoding for signal <$old_lcdstate_18>.
+    Found 4-bit register for signal <lcdd>.
+    Found 1-bit register for signal <lcdhome>.
+    Found 1-bit register for signal <rslcd>.
+    Found 1-bit register for signal <elcd>.
+    Found 1-bit register for signal <lcdreset>.
+    Found 1-bit register for signal <lcdclear>.
+    Found 1-bit register for signal <lcddata>.
+    Found 1-bit register for signal <lcdaddr>.
+    Found 19-bit register for signal <lcdcount>.
+    Found 41-bit register for signal <lcdstate>.
+    Found 19-bit adder for signal <old_lcdcount_4$addsub0000> created at line 32.
+    Summary:
+	inferred  71 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <lcd> synthesized.
+
+
+Synthesizing Unit <genlcd>.
+    Related source file is "lcdtest.v".
+WARNING:Xst:647 - Input <lcdhome> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <gstate> of Case statement line 42 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <gstate> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_0> for signal <gstate>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 22                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 16                                             |
+    | Clock              | CCLK (rising_edge)                             |
+    | Reset              | debpb0 (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <addrlcd>.
+    Found 1-bit register for signal <initlcd>.
+    Found 1-bit register for signal <datalcd>.
+    Found 1-bit register for signal <clearlcd>.
+    Found 1-bit register for signal <resetlcd>.
+    Found 8-bit register for signal <lcddatin>.
+    Found 33-bit comparator less for signal <gstate$cmp_lt0000> created at line 124.
+    Found 32-bit register for signal <i>.
+    Found 33-bit comparator greater for signal <lcddatin$cmp_gt0000> created at line 85.
+    Found 32-bit subtractor for signal <old_i_21$sub0000> created at line 123.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  45 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <genlcd> synthesized.
+
+
+Synthesizing Unit <dff>.
+    Related source file is "single_pc.v".
+    Found 9-bit register for signal <q>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <dff> synthesized.
+
+
+Synthesizing Unit <sel>.
+    Related source file is "single_pc.v".
+Unit <sel> synthesized.
+
+
+Synthesizing Unit <display>.
+    Related source file is "lcdtest.v".
+Unit <display> synthesized.
+
+
+Synthesizing Unit <single_pc>.
+    Related source file is "single_pc.v".
+Unit <single_pc> synthesized.
+
+
+Synthesizing Unit <top>.
+    Related source file is "top.v".
+WARNING:Xst:653 - Signal <strdata<191:184>> is used but never assigned. This sourceless signal will be automatically connected to value 00100000.
+WARNING:Xst:653 - Signal <strdata<167:160>> is used but never assigned. This sourceless signal will be automatically connected to value 00100000.
+WARNING:Xst:653 - Signal <strdata<143:128>> is used but never assigned. This sourceless signal will be automatically connected to value 0010000000100000.
+WARNING:Xst:653 - Signal <strdata<95:0>> is used but never assigned. This sourceless signal will be automatically connected to value 001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000.
+WARNING:Xst:646 - Signal <o_instr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <memread> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <gpr_disp_out<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <branch_mux_out<31:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit subtractor for signal <$sub0000> created at line 88.
+    Found 8-bit subtractor for signal <$sub0001> created at line 92.
+    Found 8-bit subtractor for signal <$sub0002> created at line 97.
+    Found 8-bit subtractor for signal <$sub0003> created at line 102.
+    Found 8-bit subtractor for signal <$sub0004> created at line 106.
+    Found 8-bit subtractor for signal <$sub0005> created at line 110.
+    Found 8-bit subtractor for signal <$sub0006> created at line 114.
+    Found 8-bit subtractor for signal <$sub0007> created at line 118.
+    Found 8-bit subtractor for signal <$sub0008> created at line 125.
+    Found 8-bit subtractor for signal <$sub0009> created at line 129.
+    Found 8-bit subtractor for signal <$sub0010> created at line 136.
+    Found 8-bit subtractor for signal <$sub0011> created at line 140.
+    Found 8-bit subtractor for signal <$sub0012> created at line 147.
+    Found 8-bit subtractor for signal <$sub0013> created at line 151.
+    Found 8-bit subtractor for signal <$sub0014> created at line 155.
+    Found 8-bit subtractor for signal <$sub0015> created at line 159.
+    Found 16-bit up counter for signal <clk_cnt>.
+    Found 1-bit register for signal <cls>.
+    Found 2-bit up counter for signal <disp_clk_cnt>.
+    Found 64-bit register for signal <strdata<255:192>>.
+    Found 16-bit register for signal <strdata<183:168>>.
+    Found 16-bit register for signal <strdata<159:144>>.
+    Found 32-bit register for signal <strdata<127:96>>.
+    Found 4-bit comparator less for signal <strdata_103$cmp_lt0000> created at line 156.
+    Found 6-bit adder for signal <strdata_103_96$add0000> created at line 157.
+    Found 7-bit adder for signal <strdata_103_96$add0001> created at line 159.
+    Found 4-bit comparator less for signal <strdata_111$cmp_lt0000> created at line 152.
+    Found 6-bit adder for signal <strdata_111_104$add0000> created at line 153.
+    Found 7-bit adder for signal <strdata_111_104$add0001> created at line 155.
+    Found 4-bit comparator less for signal <strdata_119$cmp_lt0000> created at line 148.
+    Found 6-bit adder for signal <strdata_119_112$add0000> created at line 149.
+    Found 7-bit adder for signal <strdata_119_112$add0001> created at line 151.
+    Found 4-bit comparator less for signal <strdata_127$cmp_lt0000> created at line 144.
+    Found 4-bit comparator not equal for signal <strdata_127$cmp_ne0000> created at line 143.
+    Found 6-bit adder for signal <strdata_127_120$add0000> created at line 145.
+    Found 7-bit adder for signal <strdata_127_120$add0001> created at line 147.
+    Found 4-bit comparator less for signal <strdata_151$cmp_lt0000> created at line 137.
+    Found 6-bit adder for signal <strdata_151_144$add0000> created at line 138.
+    Found 7-bit adder for signal <strdata_151_144$add0001> created at line 140.
+    Found 4-bit comparator less for signal <strdata_159$cmp_lt0000> created at line 133.
+    Found 6-bit adder for signal <strdata_159_152$add0000> created at line 134.
+    Found 7-bit adder for signal <strdata_159_152$add0001> created at line 136.
+    Found 4-bit comparator less for signal <strdata_175$cmp_lt0000> created at line 126.
+    Found 6-bit adder for signal <strdata_175_168$add0000> created at line 127.
+    Found 7-bit adder for signal <strdata_175_168$add0001> created at line 129.
+    Found 4-bit comparator less for signal <strdata_183$cmp_lt0000> created at line 122.
+    Found 6-bit adder for signal <strdata_183_176$add0000> created at line 123.
+    Found 7-bit adder for signal <strdata_183_176$add0001> created at line 125.
+    Found 4-bit comparator less for signal <strdata_199$cmp_lt0000> created at line 115.
+    Found 6-bit adder for signal <strdata_199_192$add0000> created at line 116.
+    Found 7-bit adder for signal <strdata_199_192$add0001> created at line 118.
+    Found 4-bit comparator less for signal <strdata_207$cmp_lt0000> created at line 111.
+    Found 6-bit adder for signal <strdata_207_200$add0000> created at line 112.
+    Found 7-bit adder for signal <strdata_207_200$add0001> created at line 114.
+    Found 4-bit comparator less for signal <strdata_215$cmp_lt0000> created at line 107.
+    Found 6-bit adder for signal <strdata_215_208$add0000> created at line 108.
+    Found 7-bit adder for signal <strdata_215_208$add0001> created at line 110.
+    Found 4-bit comparator less for signal <strdata_223$cmp_lt0000> created at line 103.
+    Found 6-bit adder for signal <strdata_223_216$add0000> created at line 104.
+    Found 7-bit adder for signal <strdata_223_216$add0001> created at line 106.
+    Found 4-bit comparator less for signal <strdata_231$cmp_lt0000> created at line 99.
+    Found 6-bit adder for signal <strdata_231_224$add0000> created at line 100.
+    Found 7-bit adder for signal <strdata_231_224$add0001> created at line 102.
+    Found 4-bit comparator less for signal <strdata_239$cmp_lt0000> created at line 94.
+    Found 6-bit adder for signal <strdata_239_232$add0000> created at line 95.
+    Found 7-bit adder for signal <strdata_239_232$add0001> created at line 97.
+    Found 4-bit comparator less for signal <strdata_247$cmp_lt0000> created at line 89.
+    Found 6-bit adder for signal <strdata_247_240$add0000> created at line 90.
+    Found 7-bit adder for signal <strdata_247_240$add0001> created at line 92.
+    Found 4-bit comparator less for signal <strdata_255$cmp_lt0000> created at line 85.
+    Found 6-bit adder for signal <strdata_255_248$add0000> created at line 86.
+    Found 7-bit adder for signal <strdata_255_248$add0001> created at line 88.
+    Found 4-bit register for signal <SW_old>.
+    Found 16-bit up counter for signal <tmp_cnt>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred 133 D-type flip-flop(s).
+	inferred  49 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+Unit <top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 55
+ 16-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 2
+ 6-bit adder                                           : 16
+ 7-bit adder                                           : 16
+ 8-bit subtractor                                      : 16
+ 9-bit adder                                           : 1
+# Counters                                             : 2
+ 16-bit up counter                                     : 2
+# Registers                                            : 191
+ 1-bit register                                        : 153
+ 19-bit register                                       : 1
+ 32-bit register                                       : 33
+ 4-bit register                                        : 1
+ 41-bit register                                       : 1
+ 8-bit register                                        : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 20
+ 32-bit comparator less                                : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator less                                : 1
+ 4-bit comparator less                                 : 16
+ 4-bit comparator not equal                            : 1
+# Multiplexers                                         : 4
+ 3-bit 4-to-1 multiplexer                              : 1
+ 32-bit 32-to-1 multiplexer                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <M0/M1/gstate/FSM> on signal <gstate[1:4]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+ 1110  | 1110
+ 1111  | 1111
+-------------------
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\10.1\ISE.
+Reading core <c_instr_mem.ngc>.
+Reading core <c_dat_mem.ngc>.
+Loading core <c_instr_mem> for timing and area information for instance <x_c_instr_mem>.
+Loading core <c_dat_mem> for timing and area information for instance <x_c_dat_mem>.
+WARNING:Xst:2677 - Node <lcdstate_40> of sequential type is unconnected in block <lcd>.
+WARNING:Xst:2677 - Node <lcdhome> of sequential type is unconnected in block <M0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 54
+ 19-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 2
+ 6-bit adder                                           : 16
+ 7-bit adder                                           : 16
+ 8-bit subtractor                                      : 16
+ 9-bit adder                                           : 1
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 1293
+ Flip-Flops                                            : 1293
+# Comparators                                          : 20
+ 32-bit comparator less                                : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator less                                : 1
+ 4-bit comparator less                                 : 16
+ 4-bit comparator not equal                            : 1
+# Multiplexers                                         : 4
+ 3-bit 4-to-1 multiplexer                              : 1
+ 32-bit 32-to-1 multiplexer                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <strdata_255> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_247> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_239> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_231> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_223> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_215> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_207> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_199> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_183> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_175> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_159> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_151> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_127> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_119> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_111> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_103> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <clk_cnt_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <clk_cnt_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <clk_cnt_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <clk_cnt_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <clk_cnt_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <clk_cnt_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <clk_cnt_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <clk_cnt_15> of sequential type is unconnected in block <top>.
+
+Optimizing unit <top> ...
+
+Optimizing unit <single_gpr> ...
+
+Optimizing unit <single_alu> ...
+
+Optimizing unit <lcd> ...
+
+Optimizing unit <genlcd> ...
+WARNING:Xst:1710 - FF/Latch <i_0> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_1> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_2> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <i_0> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_1> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_2> (without init value) has a constant value of 1 in block <genlcd>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <strdata_253> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_245> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_237> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_229> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_221> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_213> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_205> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_197> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_181> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_173> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_157> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_149> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_125> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_117> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_109> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <strdata_101> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <M0/M0/lcdhome> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <M0/M1/lcddatin_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 34.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1264
+ Flip-Flops                                            : 1264
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top.ngr
+Top Level Output File Name         : top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 3756
+#      BUF                         : 2
+#      GND                         : 3
+#      INV                         : 37
+#      LUT1                        : 25
+#      LUT2                        : 113
+#      LUT2_D                      : 4
+#      LUT2_L                      : 7
+#      LUT3                        : 1329
+#      LUT3_D                      : 8
+#      LUT3_L                      : 5
+#      LUT4                        : 677
+#      LUT4_D                      : 36
+#      LUT4_L                      : 56
+#      MUXCY                       : 185
+#      MUXF5                       : 636
+#      MUXF6                       : 289
+#      MUXF7                       : 144
+#      MUXF8                       : 64
+#      VCC                         : 3
+#      XORCY                       : 133
+# FlipFlops/Latches                : 1264
+#      FD                          : 65
+#      FDC                         : 8
+#      FDCE                        : 160
+#      FDE                         : 1002
+#      FDR                         : 5
+#      FDRE                        : 3
+#      FDRS                        : 2
+#      FDRSE                       : 1
+#      FDS                         : 18
+# RAMS                             : 2
+#      RAMB16_S36                  : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 6
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1654  out of   4656    35%  
+ Number of Slice Flip Flops:           1264  out of   9312    13%  
+ Number of 4 input LUTs:               2297  out of   9312    24%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of BRAMs:                         2  out of     20    10%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CCLK                               | BUFGP                  | 223   |
+M2/pbreg1                          | BUFG                   | 1041  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+----------------------------+-------+
+Control Signal                     | Buffer(FF name)            | Load  |
+-----------------------------------+----------------------------+-------+
+M1/pbreg(M1/pbreg:Q)               | NONE(x_single_gpr/mem_4_24)| 168   |
+-----------------------------------+----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 21.252ns (Maximum Frequency: 47.054MHz)
+   Minimum input arrival time before clock: 7.982ns
+   Maximum output required time after clock: 4.571ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CCLK'
+  Clock period: 21.252ns (frequency: 47.054MHz)
+  Total number of paths / destination ports: 10965056 / 296
+-------------------------------------------------------------------------
+Delay:               21.252ns (Levels of Logic = 26)
+  Source:            M0/M0/lcdcount_0 (FF)
+  Destination:       M0/M0/lcdstate_7 (FF)
+  Source Clock:      CCLK rising
+  Destination Clock: CCLK rising
+
+  Data Path: M0/M0/lcdcount_0 to M0/M0/lcdstate_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.591   0.587  M0/M0/lcdcount_0 (M0/M0/lcdcount_0)
+     INV:I->O              1   0.704   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_lut<0>_INV_0 (M0/M0/Madd_old_lcdcount_4_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<0> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<1> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<2> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<3> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<4> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<5> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<6> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<7> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<8> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<9> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  M0/M0/Madd_old_lcdcount_4_addsub0000_cy<10> (M0/M0/Madd_old_lcdcount_4_addsub0000_cy<10>)
+     XORCY:CI->O          11   0.804   0.968  M0/M0/Madd_old_lcdcount_4_addsub0000_xor<11> (M0/M0/old_lcdcount_4_addsub0000<11>)
+     LUT3:I2->O            7   0.704   0.712  M0/M0/old_lcdstate_6_cmp_eq000211 (M0/M0/N631)
+     LUT4:I3->O            1   0.704   0.424  M0/M0/old_lcdstate_6_cmp_eq0000178_SW1 (N480)
+     LUT4:I3->O            5   0.704   0.633  M0/M0/old_lcdstate_6_cmp_eq00031 (M0/M0/old_lcdstate_6_cmp_eq0003)
+     MUXF5:S->O            2   0.739   0.451  M0/M0/_old_lcdcount_7<4>12_SW2 (N379)
+     LUT4:I3->O           11   0.704   0.968  M0/M0/_old_lcdcount_7<4>39 (M0/M0/_old_lcdcount_7<4>)
+     LUT4_D:I2->O          4   0.704   0.622  M0/M0/old_lcdstate_10_cmp_eq000011_SW0 (N253)
+     LUT4:I2->O            2   0.704   0.482  M0/M0/_old_elcd_2061_SW0 (N239)
+     LUT4:I2->O            5   0.704   0.712  M0/M0/_old_elcd_2061 (M0/M0/N511)
+     LUT4:I1->O            1   0.704   0.455  M0/M0/_old_lcdcount_19<17>_SW0_SW0_SW0 (N287)
+     LUT4:I2->O           13   0.704   1.062  M0/M0/_old_lcdcount_19<17> (M0/M0/_old_lcdcount_19<17>)
+     LUT3:I1->O            1   0.704   0.424  M0/M0/lcdstate_cmp_eq000031_SW1 (N323)
+     LUT4_L:I3->LO         1   0.704   0.104  M0/M0/lcdstate_mux0000<33>_SW0 (N191)
+     LUT4:I3->O            1   0.704   0.000  M0/M0/lcdstate_mux0000<33> (M0/M0/lcdstate_mux0000<33>)
+     FD:D                      0.308          M0/M0/lcdstate_7
+    ----------------------------------------
+    Total                     21.252ns (12.648ns logic, 8.604ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'M2/pbreg1'
+  Clock period: 15.584ns (frequency: 64.168MHz)
+  Total number of paths / destination ports: 4236646 / 1050
+-------------------------------------------------------------------------
+Delay:               15.584ns (Levels of Logic = 42)
+  Source:            x_single_gpr/mem_0_0 (FF)
+  Destination:       x_single_pc/x_dff/q_1 (FF)
+  Source Clock:      M2/pbreg1 rising
+  Destination Clock: M2/pbreg1 rising
+
+  Data Path: x_single_gpr/mem_0_0 to x_single_pc/x_dff/q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.591   0.610  x_single_gpr/mem_0_0 (x_single_gpr/mem_0_0)
+     LUT3:I1->O            1   0.704   0.000  x_single_gpr/Mmux_o_op2_10 (x_single_gpr/Mmux_o_op2_10)
+     MUXF5:I0->O           1   0.321   0.000  x_single_gpr/Mmux_o_op2_8_f5 (x_single_gpr/Mmux_o_op2_8_f5)
+     MUXF6:I0->O           1   0.521   0.000  x_single_gpr/Mmux_o_op2_6_f6 (x_single_gpr/Mmux_o_op2_6_f6)
+     MUXF7:I0->O           1   0.521   0.000  x_single_gpr/Mmux_o_op2_4_f7 (x_single_gpr/Mmux_o_op2_4_f7)
+     MUXF8:I0->O           2   0.521   0.526  x_single_gpr/Mmux_o_op2_2_f8 (reg2_dat<0>)
+     LUT3:I1->O            4   0.704   0.666  x_single_mux32/out<0>1 (mux_to_alu<0>)
+     LUT2:I1->O            1   0.704   0.000  x_single_alu/Msub__old_o_alu_23_lut<0> (x_single_alu/Msub__old_o_alu_23_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  x_single_alu/Msub__old_o_alu_23_cy<0> (x_single_alu/Msub__old_o_alu_23_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<1> (x_single_alu/Msub__old_o_alu_23_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<2> (x_single_alu/Msub__old_o_alu_23_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<3> (x_single_alu/Msub__old_o_alu_23_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<4> (x_single_alu/Msub__old_o_alu_23_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<5> (x_single_alu/Msub__old_o_alu_23_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<6> (x_single_alu/Msub__old_o_alu_23_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<7> (x_single_alu/Msub__old_o_alu_23_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<8> (x_single_alu/Msub__old_o_alu_23_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<9> (x_single_alu/Msub__old_o_alu_23_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<10> (x_single_alu/Msub__old_o_alu_23_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<11> (x_single_alu/Msub__old_o_alu_23_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<12> (x_single_alu/Msub__old_o_alu_23_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<13> (x_single_alu/Msub__old_o_alu_23_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<14> (x_single_alu/Msub__old_o_alu_23_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<15> (x_single_alu/Msub__old_o_alu_23_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<16> (x_single_alu/Msub__old_o_alu_23_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<17> (x_single_alu/Msub__old_o_alu_23_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<18> (x_single_alu/Msub__old_o_alu_23_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<19> (x_single_alu/Msub__old_o_alu_23_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<20> (x_single_alu/Msub__old_o_alu_23_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/Msub__old_o_alu_23_cy<21> (x_single_alu/Msub__old_o_alu_23_cy<21>)
+     XORCY:CI->O           2   0.804   0.622  x_single_alu/Msub__old_o_alu_23_xor<22> (x_single_alu/_old_o_alu_23<22>)
+     LUT3:I0->O            1   0.704   0.000  x_single_alu/o_zf_wg_lut<0> (x_single_alu/o_zf_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  x_single_alu/o_zf_wg_cy<0> (x_single_alu/o_zf_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/o_zf_wg_cy<1> (x_single_alu/o_zf_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/o_zf_wg_cy<2> (x_single_alu/o_zf_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/o_zf_wg_cy<3> (x_single_alu/o_zf_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/o_zf_wg_cy<4> (x_single_alu/o_zf_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/o_zf_wg_cy<5> (x_single_alu/o_zf_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/o_zf_wg_cy<6> (x_single_alu/o_zf_wg_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  x_single_alu/o_zf_wg_cy<7> (x_single_alu/o_zf_wg_cy<7>)
+     MUXCY:CI->O           2   0.459   0.451  x_single_alu/o_zf_wg_cy<8> (alu_zero)
+     LUT4_D:I3->O          8   0.704   0.836  pc_in<0>11 (N4)
+     LUT4:I1->O            1   0.704   0.420  pc_in<7>_SW0 (N101)
+     FDS:S                     0.911          x_single_pc/x_dff/q_7
+    ----------------------------------------
+    Total                     15.584ns (11.453ns logic, 4.131ns route)
+                                       (73.5% logic, 26.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CCLK'
+  Total number of paths / destination ports: 1444 / 61
+-------------------------------------------------------------------------
+Offset:              7.982ns (Levels of Logic = 5)
+  Source:            SW<2> (PAD)
+  Destination:       strdata_126 (FF)
+  Destination Clock: CCLK rising
+
+  Data Path: SW<2> to strdata_126
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   1.218   1.438  SW_2_IBUF (SW_2_IBUF)
+     LUT4:I0->O            1   0.704   0.000  cls_not0001311 (cls_not000131)
+     MUXF5:I1->O           1   0.321   0.455  cls_not000131_f5 (cls_not0001_bdd2)
+     LUT3:I2->O            2   0.704   0.622  cls_not000121 (cls_not0001_bdd0)
+     LUT4:I0->O           28   0.704   1.261  strdata_127_or000011 (strdata_127_or0000)
+     FDE:CE                    0.555          strdata_126
+    ----------------------------------------
+    Total                      7.982ns (4.206ns logic, 3.776ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CCLK'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              4.571ns (Levels of Logic = 1)
+  Source:            M2/pbreg (FF)
+  Destination:       LED (PAD)
+  Source Clock:      CCLK rising
+
+  Data Path: M2/pbreg to LED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.591   0.708  M2/pbreg (M2/pbreg1)
+     OBUF:I->O                 3.272          LED_OBUF (LED)
+    ----------------------------------------
+    Total                      4.571ns (3.863ns logic, 0.708ns route)
+                                       (84.5% logic, 15.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 98.00 secs
+Total CPU time to Xst completion: 97.73 secs
+ 
+--> 
+
+Total memory usage is 259368 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   62 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

@@ -1,0 +1,91 @@
+--------------------------------------------------------------------------------
+Release 10.1 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+D:/3080101654_single_cpu.ise/SingleCPU.ise -intstyle ise -e 3 -s 4 -xml
+SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+
+Design file:              SingleCPU.ncd
+Physical constraint file: SingleCPU.pcf
+Device,package,speed:     xc3s200,ft256,-4 (PRODUCTION 1.39 2008-01-09)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock dispclk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+bin<0>      |   19.038(R)|   -2.785(R)|dispclk_BUFGP     |   0.000|
+bin<1>      |   12.995(R)|   -2.786(R)|dispclk_BUFGP     |   0.000|
+bin<2>      |   11.812(R)|   -2.043(R)|dispclk_BUFGP     |   0.000|
+bin<3>      |   12.611(R)|   -1.899(R)|dispclk_BUFGP     |   0.000|
+bin<4>      |   11.935(R)|   -2.543(R)|dispclk_BUFGP     |   0.000|
+bin<5>      |    5.451(R)|   -0.587(R)|dispclk_BUFGP     |   0.000|
+bin<6>      |    5.798(R)|   -1.443(R)|dispclk_BUFGP     |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock dispclk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+led<0>      |   16.426(R)|dispclk_BUFGP     |   0.000|
+led<1>      |   15.747(R)|dispclk_BUFGP     |   0.000|
+led<2>      |   15.760(R)|dispclk_BUFGP     |   0.000|
+led<3>      |   14.947(R)|dispclk_BUFGP     |   0.000|
+led<4>      |   15.452(R)|dispclk_BUFGP     |   0.000|
+node<0>     |    9.437(R)|dispclk_BUFGP     |   0.000|
+node<1>     |    9.118(R)|dispclk_BUFGP     |   0.000|
+node<2>     |    8.379(R)|dispclk_BUFGP     |   0.000|
+node<3>     |    9.583(R)|dispclk_BUFGP     |   0.000|
+segment<0>  |    9.220(R)|dispclk_BUFGP     |   0.000|
+segment<1>  |    9.432(R)|dispclk_BUFGP     |   0.000|
+segment<2>  |   10.008(R)|dispclk_BUFGP     |   0.000|
+segment<3>  |   10.701(R)|dispclk_BUFGP     |   0.000|
+segment<4>  |   10.193(R)|dispclk_BUFGP     |   0.000|
+segment<5>  |    9.435(R)|dispclk_BUFGP     |   0.000|
+segment<6>  |   10.364(R)|dispclk_BUFGP     |   0.000|
+segment<7>  |    7.360(R)|dispclk_BUFGP     |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock dispclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+dispclk        |   22.100|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed May 05 20:14:13 2010 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 108 MB
+
+
+

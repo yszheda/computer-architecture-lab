@@ -1,0 +1,72 @@
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+ngdbuild -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "SingleCPU.ucf" -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr b -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -l 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+ngdbuild -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "SingleCPU.ucf" -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr b -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+trce -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -l 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+ngdbuild -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "SingleCPU.ucf" -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+ngdbuild -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "SingleCPU.ucf" -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr b -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -l 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+ngdbuild -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "SingleCPU.ucf" -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr b -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -l 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -ifn SingleCPU.xst -ofn SingleCPU.syr
+ngdbuild -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo -nt timestamp -uc "SingleCPU.ucf" -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr b -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -l 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "F:/zerry/exp4/ex/SingleCPU/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -ifn "D:/3080104452/OK/SingleCPU/SingleCPU.xst" -ofn "D:/3080104452/OK/SingleCPU/SingleCPU.syr"
+ngdbuild -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr off -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -ifn "D:/3080104452/OK/SingleCPU/SingleCPU.xst" -ofn "D:/3080104452/OK/SingleCPU/SingleCPU.syr"
+ngdbuild -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr off -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -ifn "D:/3080104452/OK/SingleCPU/SingleCPU.xst" -ofn "D:/3080104452/OK/SingleCPU/SingleCPU.syr"
+ngdbuild -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr off -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -e 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -ifn "D:/3080104452/OK/SingleCPU/SingleCPU.xst" -ofn "D:/3080104452/OK/SingleCPU/SingleCPU.syr"
+ngdbuild -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-4 "SingleCPU.ngc" SingleCPU.ngd
+map -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr off -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "D:/3080104452/OK/SingleCPU/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+xst -ise "E:/7/OK/SingleCPU2/SingleCPU.ise" -intstyle ise -ifn "E:/7/OK/SingleCPU2/SingleCPU.xst" -ofn "E:/7/OK/SingleCPU2/SingleCPU.syr"
+xst -ise "D:/3080101654_single_cpu.ise/7/OK/SingleCPU2/SingleCPU.ise" -intstyle ise -ifn "D:/3080101654_single_cpu.ise/7/OK/SingleCPU2/SingleCPU.xst" -ofn "D:/3080101654_single_cpu.ise/7/OK/SingleCPU2/SingleCPU.syr"
+par -ise "D:/3080101654_single_cpu.ise/7/OK/SingleCPU2/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "D:/3080101654_single_cpu.ise/7/OK/SingleCPU2/SingleCPU.ise" -intstyle ise -e 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "D:/3080101654_single_cpu.ise/7/OK/SingleCPU2/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd
+xst -ise "D:/3080101654_single_cpu.ise/SingleCPU.ise" -intstyle ise -ifn "D:/3080101654_single_cpu.ise/SingleCPU.xst" -ofn "D:/3080101654_single_cpu.ise/SingleCPU.syr"
+map -ise "D:/3080101654_single_cpu.ise/SingleCPU.ise" -intstyle ise -p xc3s200-ft256-4 -cm area -pr off -k 4 -c 100 -o SingleCPU_map.ncd SingleCPU.ngd SingleCPU.pcf
+par -ise "D:/3080101654_single_cpu.ise/SingleCPU.ise" -w -intstyle ise -ol std -t 1 SingleCPU_map.ncd SingleCPU.ncd SingleCPU.pcf
+trce -ise "D:/3080101654_single_cpu.ise/SingleCPU.ise" -intstyle ise -e 3 -s 4 -xml SingleCPU SingleCPU.ncd -o SingleCPU.twr SingleCPU.pcf -ucf SingleCPU.ucf
+bitgen -ise "D:/3080101654_single_cpu.ise/SingleCPU.ise" -intstyle ise -f SingleCPU.ut SingleCPU.ncd

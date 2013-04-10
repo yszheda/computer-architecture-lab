@@ -1,0 +1,48 @@
+Command line:
+   ./SingleCPU_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  54214
+WARNING:Simulator:678 -  For instance SingleCPU/s4/, width 32 of formal port
+   o_32 is not equal to width 1 of actual signal signext_out.
+WARNING:Simulator:678 -  For instance SingleCPU/m2/, width 32 of formal port B
+   is not equal to width 1 of actual signal signext_out.
+WARNING:Simulator:678 -  For instance SingleCPU/s5/, width 32 of formal port
+   i_op1 is not equal to width 1 of actual signal signext_out.
+WARNING:Simulator:678 -  For instance SingleCPU/m4/, width 32 of formal port A
+   is not equal to width 9 of actual signal pc_plus4.
+WARNING:Simulator:16 - For instance SingleCPU/m5/, width 8 of formal port A is
+   not equal to width 9 of actual.
+WARNING:Simulator:16 - For instance SingleCPU/m5/, width 8 of formal port B is
+   not equal to width 9 of actual.
+WARNING:Simulator:678 -  For instance SingleCPU/m5/, width 8 of formal port S is
+   not equal to width 9 of actual signal pc_in.
+
+Tue Mar 08 21:14:10 2011
+
+Total Line Count : 568
+
+ Elaboration Time: 0.0936 sec
+
+ Current Memory Usage: 166.187 Meg
+
+ Total Signals          : 184
+ Total Nets             : 822
+ Total Signal Drivers   : 70
+ Total Blocks           : 33
+ Total Primitive Blocks : 22
+ Total Processes        : 112
+ Total Traceable Variables  : 217
+ Total Scalar Nets and Variables : 72184
+ntrace select -o on -m / -l this 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.202801 sec
+
+ Current Memory Usage: 175.624 Meg
+
+Tue Mar 08 21:18:14 2011
+

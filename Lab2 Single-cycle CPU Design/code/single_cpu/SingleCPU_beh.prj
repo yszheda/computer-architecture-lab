@@ -1,0 +1,5 @@
+verilog work "instr_block.v"
+verilog work "help.v"
+verilog work "dat_block.v"
+verilog work "SingleCPU.v"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

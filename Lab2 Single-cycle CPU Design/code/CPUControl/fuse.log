@@ -1,0 +1,21 @@
+Determining compilation order of HDL files
+Analyzing Verilog file ctltop.v
+Analyzing Verilog file ctltest_v.v
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Saving Verilog parse-tree work.ctltop into
+d:/workspace/cpucontrol/isim/work/ctltop.sdb
+Saving Verilog parse-tree work.ctltest_v into
+d:/workspace/cpucontrol/isim/work/ctltest_v.sdb
+Saving Verilog parse-tree work.glbl into
+d:/workspace/cpucontrol/isim/work/glbl.sdb
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 114460 Kb
+Fuse CPU Usage: 342 ms
+Compiling module glbl
+Compiling module ctltop
+Compiling module ctltest_v
+Compiled 3 Verilog Units
+Built simulation executable ctltest_v_isim_beh.exe
+Fuse Memory Usage: 115848 Kb
+Fuse CPU Usage: 467 ms

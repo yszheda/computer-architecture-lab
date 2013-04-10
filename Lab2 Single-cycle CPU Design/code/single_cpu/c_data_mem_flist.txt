@@ -1,0 +1,10 @@
+# Output products list for <c_data_mem>
+c_data_mem.mif
+c_data_mem.ngc
+c_data_mem.v
+c_data_mem.veo
+c_data_mem.vhd
+c_data_mem.vho
+c_data_mem.xco
+c_data_mem_flist.txt
+c_data_mem_xmdf.tcl

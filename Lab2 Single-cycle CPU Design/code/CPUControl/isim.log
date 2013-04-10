@@ -1,0 +1,37 @@
+Command line:
+   ./ctltest_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  50240
+
+Wed Mar 09 15:28:17 2011
+
+Total Line Count : 36
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 163.897 Meg
+
+ Total Signals          : 28
+ Total Nets             : 25
+ Total Signal Drivers   : 15
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 19
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 111
+ntrace select -o on -n /ctltest_v/RegDst 
+ntrace select -o on -n /ctltest_v/ALUsrc 
+ntrace select -o on -n /ctltest_v/ALUop 
+ntrace select -o on -n /ctltest_v/MemtoReg 
+ntrace select -o on -n /ctltest_v/RegWrite 
+ntrace select -o on -n /ctltest_v/MemRead 
+ntrace select -o on -n /ctltest_v/MemWrite 
+ntrace select -o on -n /ctltest_v/Branch 
+ntrace select -o on -n /ctltest_v/Jump 
+ntrace select -o on -n /ctltest_v/clk 
+ntrace select -o on -n /ctltest_v/OP 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

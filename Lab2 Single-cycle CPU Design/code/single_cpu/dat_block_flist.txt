@@ -1,0 +1,12 @@
+# Output products list for <dat_block>
+dat_block.asy
+dat_block.edn
+dat_block.mif
+dat_block.sym
+dat_block.v
+dat_block.veo
+dat_block.vhd
+dat_block.vho
+dat_block.xco
+dat_block_flist.txt
+dat_block_xmdf.tcl
